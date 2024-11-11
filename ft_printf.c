@@ -10,6 +10,12 @@ void	ft_format(va_list hh, char *str, size_t *counter)
 		ft_putnbr_pf(va_arg(hh, int), counter);
 	else if (*str == 'u')
 		ft_putuint_pf(va_arg(hh, unsigned int), counter);
+	else if (*str == 'x')
+		ft_puthex_mini_pf(va_arg(hh, unsigned long long), counter);
+	else if (*str == 'X')
+		ft_puthex_maj_pf(va_arg(hh, unsigned long long), counter);
+	else if (*str == 'p')
+		ft_putptr_pf(va_arg(hh, void *), counter);
 	else if (*str == '%')
 		ft_putchar_pf(*str, counter);
 }

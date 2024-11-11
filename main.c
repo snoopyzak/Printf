@@ -1,10 +1,13 @@
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	main(void)
+int main()
 {
-	int i = 9;
-	char hh[] = "hello";
-	char s[] = "hi haha please printf this for me %d and this %s";
+    int x = 42;
+    size_t counter = 0;
 
-	ft_printf(s, i, hh);
+	ft_putptr_pf(&x, &counter);
+
+    printf("\nCharacters printed: %zu\n", counter);
+    return 0;
 }
